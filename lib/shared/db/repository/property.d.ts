@@ -2,6 +2,7 @@ declare const create_property: (data: any) => Promise<import("mongoose").Documen
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    is_active: boolean;
     description: string;
     title: string;
     categories: string[];
@@ -34,6 +35,9 @@ declare const create_property: (data: any) => Promise<import("mongoose").Documen
     }>;
     createdBy: any;
     updatedBy: any;
+    meta_title: string;
+    meta_description: string;
+    meta_keywords: string;
     id?: number | null | undefined;
     details?: {
         customId: string;
@@ -175,6 +179,7 @@ declare const create_property: (data: any) => Promise<import("mongoose").Documen
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    is_active: boolean;
     description: string;
     title: string;
     categories: string[];
@@ -207,6 +212,9 @@ declare const create_property: (data: any) => Promise<import("mongoose").Documen
     }>;
     createdBy: any;
     updatedBy: any;
+    meta_title: string;
+    meta_description: string;
+    meta_keywords: string;
     id?: number | null | undefined;
     details?: {
         customId: string;
@@ -353,6 +361,7 @@ declare const update_property: (query: any, data: any) => Promise<(import("mongo
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    is_active: boolean;
     description: string;
     title: string;
     categories: string[];
@@ -385,6 +394,9 @@ declare const update_property: (query: any, data: any) => Promise<(import("mongo
     }>;
     createdBy: any;
     updatedBy: any;
+    meta_title: string;
+    meta_description: string;
+    meta_keywords: string;
     id?: number | null | undefined;
     details?: {
         customId: string;
@@ -526,6 +538,7 @@ declare const update_property: (query: any, data: any) => Promise<(import("mongo
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    is_active: boolean;
     description: string;
     title: string;
     categories: string[];
@@ -558,6 +571,9 @@ declare const update_property: (query: any, data: any) => Promise<(import("mongo
     }>;
     createdBy: any;
     updatedBy: any;
+    meta_title: string;
+    meta_description: string;
+    meta_keywords: string;
     id?: number | null | undefined;
     details?: {
         customId: string;
@@ -704,6 +720,7 @@ declare const delete_property: (query: any) => Promise<import("mongodb").DeleteR
 declare const get_property: (query: any) => Promise<(import("mongoose").FlattenMaps<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
+    is_active: boolean;
     description: string;
     title: string;
     categories: string[];
@@ -736,6 +753,9 @@ declare const get_property: (query: any) => Promise<(import("mongoose").FlattenM
     }>;
     createdBy: any;
     updatedBy: any;
+    meta_title: string;
+    meta_description: string;
+    meta_keywords: string;
     id?: number | null | undefined;
     details?: {
         customId: string;
@@ -881,6 +901,7 @@ declare const get_property: (query: any) => Promise<(import("mongoose").FlattenM
 declare const list_property: (query: any, per_page: any, page_no: any, sort: any, projection: any) => Promise<(import("mongoose").FlattenMaps<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
+    is_active: boolean;
     description: string;
     title: string;
     categories: string[];
@@ -913,6 +934,9 @@ declare const list_property: (query: any, per_page: any, page_no: any, sort: any
     }>;
     createdBy: any;
     updatedBy: any;
+    meta_title: string;
+    meta_description: string;
+    meta_keywords: string;
     id?: number | null | undefined;
     details?: {
         customId: string;
@@ -1066,6 +1090,7 @@ declare const upsert_property: (query: any, data: any) => Promise<(import("mongo
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    is_active: boolean;
     description: string;
     title: string;
     categories: string[];
@@ -1098,6 +1123,9 @@ declare const upsert_property: (query: any, data: any) => Promise<(import("mongo
     }>;
     createdBy: any;
     updatedBy: any;
+    meta_title: string;
+    meta_description: string;
+    meta_keywords: string;
     id?: number | null | undefined;
     details?: {
         customId: string;
@@ -1239,6 +1267,7 @@ declare const upsert_property: (query: any, data: any) => Promise<(import("mongo
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    is_active: boolean;
     description: string;
     title: string;
     categories: string[];
@@ -1271,6 +1300,9 @@ declare const upsert_property: (query: any, data: any) => Promise<(import("mongo
     }>;
     createdBy: any;
     updatedBy: any;
+    meta_title: string;
+    meta_description: string;
+    meta_keywords: string;
     id?: number | null | undefined;
     details?: {
         customId: string;

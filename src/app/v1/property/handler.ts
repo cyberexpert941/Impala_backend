@@ -141,17 +141,10 @@ class Controller {
             next(err);
         }
     }
-    async list_all(req, res, next) {
+    async list_web(req, res, next) {
         try {
             let { query, params, headers } = req
-            let filterQuery = {"is_active":true}
-
-            let decoded = await jsonWebToken.verify((headers.authorization).split(" ")[1])
-            // console.log("decoded677",JSON.stringify(decoded))
-            let user_type = decoded?.user_types?.[0]?.name;
-            if(user_type != "SUPER_ADMIN"){
-                filterQuery["country_name"] = decoded?.country;
-            }         
+            let filterQuery = {"is_active":true}                   
 
             let sort = { "createdAt": -1 }
 
@@ -162,14 +155,35 @@ class Controller {
             } 
 
             let search_or_conditions = []
-            let and_conditions = []
+            let and_conditions = [] 
             //======================= search filter=======================================================================
             if (!(typeof query?.search === 'undefined')) {
-                search_or_conditions.push({ "country_name": new RegExp(`.*${query?.search}.*`, 'i') })
-                search_or_conditions.push({ "country_code": new RegExp(`.*${query?.search}.*`, 'i') })
-                search_or_conditions.push({ "country_currency": new RegExp(`.*${query?.search}.*`, 'i') })
-                search_or_conditions.push({ "country_timezone": new RegExp(`.*${query?.search}.*`, 'i') })
+                search_or_conditions.push({ "title": new RegExp(`.*${query?.search}.*`, 'i') })
             } 
+
+            // Categories: comma-separated string -> array
+            if (query?.categories) {
+                const categoriesArray = Array.isArray(query.categories)
+                ? query.categories
+                : query?.categories?.split(',')?.map(c => c?.trim());
+            
+                if (categoriesArray?.length) {
+                search_or_conditions.push({
+                    categories: { $in: categoriesArray }
+                });
+                }
+            }
+
+            // Price range
+            const priceFilter = {};
+            if (query?.minPrice) priceFilter.$gte = Number(query.minPrice);
+            if (query?.maxPrice) priceFilter.$lte = Number(query.maxPrice);
+
+            if (Object.keys(priceFilter).length) {
+            search_or_conditions.push({
+                price: priceFilter
+            });
+            }
 
             if (search_or_conditions.length > 0) {
                 and_conditions.push({

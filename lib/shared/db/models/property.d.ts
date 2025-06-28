@@ -3,6 +3,7 @@ declare const property: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    is_active: boolean;
     description: string;
     title: string;
     categories: string[];
@@ -35,6 +36,9 @@ declare const property: mongoose.Model<{
     }>;
     createdBy: any;
     updatedBy: any;
+    meta_title: string;
+    meta_description: string;
+    meta_keywords: string;
     id?: number | null | undefined;
     details?: {
         customId: string;
@@ -176,6 +180,7 @@ declare const property: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    is_active: boolean;
     description: string;
     title: string;
     categories: string[];
@@ -208,6 +213,9 @@ declare const property: mongoose.Model<{
     }>;
     createdBy: any;
     updatedBy: any;
+    meta_title: string;
+    meta_description: string;
+    meta_keywords: string;
     id?: number | null | undefined;
     details?: {
         customId: string;
@@ -349,6 +357,7 @@ declare const property: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    is_active: boolean;
     description: string;
     title: string;
     categories: string[];
@@ -381,6 +390,9 @@ declare const property: mongoose.Model<{
     }>;
     createdBy: any;
     updatedBy: any;
+    meta_title: string;
+    meta_description: string;
+    meta_keywords: string;
     id?: number | null | undefined;
     details?: {
         customId: string;
@@ -529,6 +541,7 @@ declare const property: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    is_active: boolean;
     description: string;
     title: string;
     categories: string[];
@@ -561,6 +574,9 @@ declare const property: mongoose.Model<{
     }>;
     createdBy: any;
     updatedBy: any;
+    meta_title: string;
+    meta_description: string;
+    meta_keywords: string;
     id?: number | null | undefined;
     details?: {
         customId: string;
@@ -702,6 +718,7 @@ declare const property: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    is_active: boolean;
     description: string;
     title: string;
     categories: string[];
@@ -734,6 +751,9 @@ declare const property: mongoose.Model<{
     }>;
     createdBy: any;
     updatedBy: any;
+    meta_title: string;
+    meta_description: string;
+    meta_keywords: string;
     id?: number | null | undefined;
     details?: {
         customId: string;
@@ -875,6 +895,7 @@ declare const property: mongoose.Model<{
     createdAt: NativeDate;
     updatedAt: NativeDate;
 } & {
+    is_active: boolean;
     description: string;
     title: string;
     categories: string[];
@@ -907,6 +928,9 @@ declare const property: mongoose.Model<{
     }>;
     createdBy: any;
     updatedBy: any;
+    meta_title: string;
+    meta_description: string;
+    meta_keywords: string;
     id?: number | null | undefined;
     details?: {
         customId: string;

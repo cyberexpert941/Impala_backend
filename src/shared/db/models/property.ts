@@ -147,8 +147,12 @@ const propertySchema = new mongoose.Schema(
             description: { type: String }, // e.g., "Somewhat Bikeable"
         }
         },
+        is_active: { type: Boolean, default: true },
         createdBy: { type: Object, default: "" },
         updatedBy: { type: Object, default: "" },
+        meta_title: { type: String, default: "" },
+        meta_description: { type: String, default: "" },
+        meta_keywords: { type: String, default: "" },        
   },
   { timestamps: true, _id: true }
 );

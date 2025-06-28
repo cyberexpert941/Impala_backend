@@ -13,6 +13,6 @@ router.post('/:id/update', authentication, newController.update)
 router.delete('/:id/delete', authentication, newController.delete)
 router.get('/get/:id', authentication, newController.get)
 router.get('', authentication, newController.list)
-router.get('/get_all', newController.list_all)
+router.get('/web', newController.list_web)
 
 export default router

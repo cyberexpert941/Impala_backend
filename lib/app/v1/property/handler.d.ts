@@ -5,6 +5,6 @@ declare class Controller {
     delete(req: any, res: any, next: any): Promise<void>;
     get(req: any, res: any, next: any): Promise<void>;
     list(req: any, res: any, next: any): Promise<void>;
-    list_all(req: any, res: any, next: any): Promise<void>;
+    list_web(req: any, res: any, next: any): Promise<void>;
 }
 export default Controller;

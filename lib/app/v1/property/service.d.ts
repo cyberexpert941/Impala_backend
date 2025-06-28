@@ -3,6 +3,7 @@ declare class Service {
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
+        is_active: boolean;
         description: string;
         title: string;
         categories: string[];
@@ -35,6 +36,9 @@ declare class Service {
         }>;
         createdBy: any;
         updatedBy: any;
+        meta_title: string;
+        meta_description: string;
+        meta_keywords: string;
         id?: number | null | undefined;
         details?: {
             customId: string;
@@ -176,6 +180,7 @@ declare class Service {
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
+        is_active: boolean;
         description: string;
         title: string;
         categories: string[];
@@ -208,6 +213,9 @@ declare class Service {
         }>;
         createdBy: any;
         updatedBy: any;
+        meta_title: string;
+        meta_description: string;
+        meta_keywords: string;
         id?: number | null | undefined;
         details?: {
             customId: string;
@@ -354,6 +362,7 @@ declare class Service {
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
+        is_active: boolean;
         description: string;
         title: string;
         categories: string[];
@@ -386,6 +395,9 @@ declare class Service {
         }>;
         createdBy: any;
         updatedBy: any;
+        meta_title: string;
+        meta_description: string;
+        meta_keywords: string;
         id?: number | null | undefined;
         details?: {
             customId: string;
@@ -527,6 +539,7 @@ declare class Service {
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
+        is_active: boolean;
         description: string;
         title: string;
         categories: string[];
@@ -559,6 +572,9 @@ declare class Service {
         }>;
         createdBy: any;
         updatedBy: any;
+        meta_title: string;
+        meta_description: string;
+        meta_keywords: string;
         id?: number | null | undefined;
         details?: {
             customId: string;
@@ -705,6 +721,7 @@ declare class Service {
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
+        is_active: boolean;
         description: string;
         title: string;
         categories: string[];
@@ -737,6 +754,9 @@ declare class Service {
         }>;
         createdBy: any;
         updatedBy: any;
+        meta_title: string;
+        meta_description: string;
+        meta_keywords: string;
         id?: number | null | undefined;
         details?: {
             customId: string;
@@ -878,6 +898,7 @@ declare class Service {
         createdAt: NativeDate;
         updatedAt: NativeDate;
     } & {
+        is_active: boolean;
         description: string;
         title: string;
         categories: string[];
@@ -910,6 +931,9 @@ declare class Service {
         }>;
         createdBy: any;
         updatedBy: any;
+        meta_title: string;
+        meta_description: string;
+        meta_keywords: string;
         id?: number | null | undefined;
         details?: {
             customId: string;
@@ -1056,6 +1080,7 @@ declare class Service {
     get(query: any): Promise<(import("mongoose").FlattenMaps<{
         createdAt: NativeDate;
         updatedAt: NativeDate;
+        is_active: boolean;
         description: string;
         title: string;
         categories: string[];
@@ -1088,6 +1113,9 @@ declare class Service {
         }>;
         createdBy: any;
         updatedBy: any;
+        meta_title: string;
+        meta_description: string;
+        meta_keywords: string;
         id?: number | null | undefined;
         details?: {
             customId: string;
@@ -1234,6 +1262,7 @@ declare class Service {
         resp: (import("mongoose").FlattenMaps<{
             createdAt: NativeDate;
             updatedAt: NativeDate;
+            is_active: boolean;
             description: string;
             title: string;
             categories: string[];
@@ -1266,6 +1295,9 @@ declare class Service {
             }>;
             createdBy: any;
             updatedBy: any;
+            meta_title: string;
+            meta_description: string;
+            meta_keywords: string;
             id?: number | null | undefined;
             details?: {
                 customId: string;

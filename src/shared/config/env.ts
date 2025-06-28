@@ -1,0 +1,9 @@
+export let global_env: any = {
+    PORT: process.env.PORT || 3000,
+    DB_CONNECTION_STRING: process.env.DB_CONNECTION_STRING,
+
+    JWT_SECRET: "a267768298b0c1f1c981ff964be7ecf3b249551cbaa43ea2d27027932f6621b76d1501690e7801fbdb27aec018d9074ee160c98b1d279c3fee3fe9c0ab3a0c163ffe23dfa89bd8964eb25dca2a736d4123e1bd55d7ebe9703f31a3d932fc6db544bed35544b05ab8613d2d1edec9453ba277e88a25fb014edbd0bc85a3f076de",
+    EXPIRY_TIME: "3d",
+    RAZORPAY_KEY: "rzp_test_TzvW09QmOilcyv",
+    RAZORPAY_KEY_SECRET: "dw2csrSLgUayRtcHSTKNVCNT",
+}

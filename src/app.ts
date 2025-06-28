@@ -80,7 +80,7 @@ app.use((err: Error, req: express.Request, res: express.Response, next: express.
   });
 });
 
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 5192;
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);

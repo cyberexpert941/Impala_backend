@@ -1447,5 +1447,6 @@ declare class Service {
             total_pages: number;
         };
     }>;
+    get_count_by_regions(query: any): Promise<any[]>;
 }
 export default Service;

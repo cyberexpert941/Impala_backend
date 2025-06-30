@@ -12,8 +12,8 @@ router.post('/upsert', authentication, newController.upsert)
 router.post('/:id/update', authentication, newController.update)
 router.delete('/:id/delete', authentication, newController.delete)
 router.get('/get/:id', authentication, newController.get)
+router.get('/get_with_property_and_user/:id', authentication, newController.get_with_property_and_user)
 router.get('', authentication, newController.list)
-router.get('/web', newController.list_web)
-router.get('/get_count_by_regions', newController.get_count_by_regions)
+router.get('/get_all', newController.list_all)
 
 export default router

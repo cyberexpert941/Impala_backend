@@ -4,8 +4,8 @@ declare class Controller {
     update(req: any, res: any, next: any): Promise<void>;
     delete(req: any, res: any, next: any): Promise<void>;
     get(req: any, res: any, next: any): Promise<void>;
+    get_with_property_and_user(req: any, res: any, next: any): Promise<void>;
     list(req: any, res: any, next: any): Promise<void>;
-    list_web(req: any, res: any, next: any): Promise<void>;
-    get_count_by_regions(req: any, res: any, next: any): Promise<void>;
+    list_all(req: any, res: any, next: any): Promise<void>;
 }
 export default Controller;

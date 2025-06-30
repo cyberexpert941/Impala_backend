@@ -58,6 +58,21 @@ const get_count_for_property = async (query) => {
   return total_record;
 };
 
+const get_count_by_regions = async (query = {}) => {
+  return await property.aggregate([
+    { $match: query },
+    { $unwind: "$location.regions" },
+    {
+      $group: {
+        _id: "$location.regions",
+        count: { $sum: 1 },
+      },
+    },
+    { $sort: { count: -1 } },
+  ]);
+};
+
+
 const upsert_property = async (query, data) => {
   return await property.findOneAndUpdate(query, data, { upsert: true });
 };
@@ -76,5 +91,6 @@ export {
   upsert_property,
   get_pagination_for_property,
   get_count_for_property,
-  delete_Allproperty
+  delete_Allproperty,
+  get_count_by_regions
 };

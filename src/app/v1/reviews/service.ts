@@ -1,21 +1,21 @@
 //@ts-nocheck
 import {
-    create_property,
-    upsert_property,
-    update_property,
-    delete_property,
-    get_property,
-    get_pagination_for_property,
-    list_property,
-    get_count_by_regions
-} from "../../../shared/db/repository/property";
+    create_reviews,
+    upsert_reviews,
+    update_reviews,
+    delete_reviews,
+    get_reviews,
+    get_pagination_for_reviews,
+    list_reviews,
+    get_reviews_with_property_and_user
+} from "../../../shared/db/repository/reviews";
 
 
 class Service {
     //======================================== usage allocation ==========================================================
     async create(data) {
         try {
-            let resp = await create_property(data);
+            let resp = await create_reviews(data);
             return resp
         } catch (err) {
             console.log("Error ====>>>", err);
@@ -24,7 +24,7 @@ class Service {
     }
     async upsert(query, data) {
         try {
-            let resp = await upsert_property(query, data);
+            let resp = await upsert_reviews(query, data);
             return resp
         } catch (err) {
             console.log("Error ====>>>", err);
@@ -33,7 +33,7 @@ class Service {
     }
     async update(query, data) {
         try {
-            let resp = await update_property(query, data);
+            let resp = await update_reviews(query, data);
             return resp
         } catch (err) {
             console.log("Error ====>>>", err);
@@ -42,7 +42,7 @@ class Service {
     }
     async delete(query) {
         try {
-            let resp = await delete_property(query);
+            let resp = await delete_reviews(query);
             return resp
         } catch (err) {
             console.log("Error ====>>>", err);
@@ -51,7 +51,16 @@ class Service {
     }
     async get(query) {
         try {
-            let resp = await get_property(query);
+            let resp = await get_reviews(query);
+            return resp
+        } catch (err) {
+            console.log("Error ====>>>", err);
+            throw err
+        }
+    }
+    async get_with_property_and_user(query) {
+        try {
+            let resp = await get_reviews_with_property_and_user(query);
             return resp
         } catch (err) {
             console.log("Error ====>>>", err);
@@ -61,19 +70,10 @@ class Service {
     async list(query, per_page, page_no, sort) {
         try {
 
-            let pagination = await get_pagination_for_property(query, per_page, page_no)
+            let pagination = await get_pagination_for_reviews(query, per_page, page_no)
             let projection = "-__v -_id -description -createdAt -updatedAt -is_enabled"
-            let resp = await list_property(query, per_page, page_no, sort, projection);
+            let resp = await list_reviews(query, per_page, page_no, sort, projection);
             return { resp, pagination }
-        } catch (err) {
-            console.log("Error ====>>>", err);
-            throw err
-        }
-    }
-    async get_count_by_regions(query) {
-        try {
-            let resp = await get_count_by_regions(query);
-            return resp
         } catch (err) {
             console.log("Error ====>>>", err);
             throw err

@@ -148,6 +148,25 @@ class Controller {
 
             let sort = { "createdAt": -1 }
 
+            if (query?.sortBy) {
+                switch (query.sortBy) {
+                  case 'newest':
+                    sort = { createdAt: -1 };
+                    break;
+                  case 'oldest':
+                    sort = { createdAt: 1 };
+                    break;
+                  case 'price_low_high':
+                    sort = { price: 1 };
+                    break;
+                  case 'price_high_low':
+                    sort = { price: -1 };
+                    break;
+                  default:
+                    sort = { createdAt: -1 };
+                }
+            }
+
             let per_page = parseInt(query?.per_page || "10")
             let page_no = 1
             if ((!(typeof query?.page_no === 'undefined')) && parseInt(query?.page_no) != "0") {

@@ -1448,5 +1448,6 @@ declare class Service {
         };
     }>;
     get_count_by_regions(query: any): Promise<any[]>;
+    get_count_by_categories(query: any): Promise<any[]>;
 }
 export default Service;

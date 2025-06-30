@@ -15,5 +15,6 @@ router.get('/get/:id', authentication, newController.get)
 router.get('', authentication, newController.list)
 router.get('/web', newController.list_web)
 router.get('/get_count_by_regions', newController.get_count_by_regions)
+router.get('/get_count_by_categories', newController.get_count_by_categories)
 
 export default router

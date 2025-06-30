@@ -72,6 +72,20 @@ const get_count_by_regions = async (query = {}) => {
   ]);
 };
 
+const get_count_by_categories = async (query = {}) => {
+  return await property.aggregate([
+    { $match: query },
+    { $unwind: "$categories" },
+    {
+      $group: {
+        _id: "$categories",
+        count: { $sum: 1 },
+      },
+    },
+    { $sort: { count: -1 } },
+  ]);
+};
+
 
 const upsert_property = async (query, data) => {
   return await property.findOneAndUpdate(query, data, { upsert: true });
@@ -92,5 +106,6 @@ export {
   get_pagination_for_property,
   get_count_for_property,
   delete_Allproperty,
-  get_count_by_regions
+  get_count_by_regions,
+  get_count_by_categories
 };

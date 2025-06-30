@@ -1087,6 +1087,7 @@ declare const get_pagination_for_property: (query: any, per_page: any, page_no: 
 }>;
 declare const get_count_for_property: (query: any) => Promise<number>;
 declare const get_count_by_regions: (query?: {}) => Promise<any[]>;
+declare const get_count_by_categories: (query?: {}) => Promise<any[]>;
 declare const upsert_property: (query: any, data: any) => Promise<(import("mongoose").Document<unknown, {}, {
     createdAt: NativeDate;
     updatedAt: NativeDate;
@@ -1447,4 +1448,4 @@ declare const upsert_property: (query: any, data: any) => Promise<(import("mongo
     __v: number;
 }) | null>;
 declare const delete_Allproperty: (query: any) => Promise<import("mongodb").DeleteResult>;
-export { create_property, update_property, delete_property, get_property, list_property, upsert_property, get_pagination_for_property, get_count_for_property, delete_Allproperty, get_count_by_regions };
+export { create_property, update_property, delete_property, get_property, list_property, upsert_property, get_pagination_for_property, get_count_for_property, delete_Allproperty, get_count_by_regions, get_count_by_categories };

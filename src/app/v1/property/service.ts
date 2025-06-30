@@ -7,7 +7,8 @@ import {
     get_property,
     get_pagination_for_property,
     list_property,
-    get_count_by_regions
+    get_count_by_regions,
+    get_count_by_categories
 } from "../../../shared/db/repository/property";
 
 
@@ -73,6 +74,15 @@ class Service {
     async get_count_by_regions(query) {
         try {
             let resp = await get_count_by_regions(query);
+            return resp
+        } catch (err) {
+            console.log("Error ====>>>", err);
+            throw err
+        }
+    }
+    async get_count_by_categories(query) {
+        try {
+            let resp = await get_count_by_categories(query);
             return resp
         } catch (err) {
             console.log("Error ====>>>", err);

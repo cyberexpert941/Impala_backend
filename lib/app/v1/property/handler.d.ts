@@ -7,5 +7,6 @@ declare class Controller {
     list(req: any, res: any, next: any): Promise<void>;
     list_web(req: any, res: any, next: any): Promise<void>;
     get_count_by_regions(req: any, res: any, next: any): Promise<void>;
+    get_count_by_categories(req: any, res: any, next: any): Promise<void>;
 }
 export default Controller;

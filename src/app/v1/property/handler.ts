@@ -276,6 +276,17 @@ class Controller {
             next(err);
         }
     }
+    async get_count_by_categories(req, res, next) {
+        try {
+            let { query } = req
+            let resp = await newService.get_count_by_categories(query)
+            SUCCESS_RESP.meta.message = "retrieved successfully"
+            SUCCESS_RESP.data = resp || {}
+            res.status(200).json(SUCCESS_RESP)
+        } catch (err) {
+            next(err);
+        }
+    }   
 }
 
 export default Controller

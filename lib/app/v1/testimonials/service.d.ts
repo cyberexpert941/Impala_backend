@@ -6,12 +6,11 @@ declare class Service {
         sort_order: number;
         is_active: boolean;
         name: string;
-        country: string;
-        company: string;
         rating: number;
-        designation: string;
-        testimonial: string;
         category: string;
+        designation: string;
+        company: string;
+        testimonial: string;
         id?: number | null | undefined;
         avatar?: string | null | undefined;
     }, {}> & {
@@ -21,12 +20,11 @@ declare class Service {
         sort_order: number;
         is_active: boolean;
         name: string;
-        country: string;
-        company: string;
         rating: number;
-        designation: string;
-        testimonial: string;
         category: string;
+        designation: string;
+        company: string;
+        testimonial: string;
         id?: number | null | undefined;
         avatar?: string | null | undefined;
     } & {
@@ -41,12 +39,11 @@ declare class Service {
         sort_order: number;
         is_active: boolean;
         name: string;
-        country: string;
-        company: string;
         rating: number;
-        designation: string;
-        testimonial: string;
         category: string;
+        designation: string;
+        company: string;
+        testimonial: string;
         id?: number | null | undefined;
         avatar?: string | null | undefined;
     }, {}> & {
@@ -56,12 +53,11 @@ declare class Service {
         sort_order: number;
         is_active: boolean;
         name: string;
-        country: string;
-        company: string;
         rating: number;
-        designation: string;
-        testimonial: string;
         category: string;
+        designation: string;
+        company: string;
+        testimonial: string;
         id?: number | null | undefined;
         avatar?: string | null | undefined;
     } & {
@@ -76,12 +72,11 @@ declare class Service {
         sort_order: number;
         is_active: boolean;
         name: string;
-        country: string;
-        company: string;
         rating: number;
-        designation: string;
-        testimonial: string;
         category: string;
+        designation: string;
+        company: string;
+        testimonial: string;
         id?: number | null | undefined;
         avatar?: string | null | undefined;
     }, {}> & {
@@ -91,12 +86,11 @@ declare class Service {
         sort_order: number;
         is_active: boolean;
         name: string;
-        country: string;
-        company: string;
         rating: number;
-        designation: string;
-        testimonial: string;
         category: string;
+        designation: string;
+        company: string;
+        testimonial: string;
         id?: number | null | undefined;
         avatar?: string | null | undefined;
     } & {
@@ -111,12 +105,11 @@ declare class Service {
         sort_order: number;
         is_active: boolean;
         name: string;
-        country: string;
-        company: string;
         rating: number;
-        designation: string;
-        testimonial: string;
         category: string;
+        designation: string;
+        company: string;
+        testimonial: string;
         id?: number | null | undefined;
         avatar?: string | null | undefined;
     }> & {
@@ -131,12 +124,11 @@ declare class Service {
             sort_order: number;
             is_active: boolean;
             name: string;
-            country: string;
-            company: string;
             rating: number;
-            designation: string;
-            testimonial: string;
             category: string;
+            designation: string;
+            company: string;
+            testimonial: string;
             id?: number | null | undefined;
             avatar?: string | null | undefined;
         }> & {

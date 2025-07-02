@@ -6,12 +6,11 @@ declare const Testimonial: mongoose.Model<{
     sort_order: number;
     is_active: boolean;
     name: string;
-    country: string;
-    company: string;
     rating: number;
-    designation: string;
-    testimonial: string;
     category: string;
+    designation: string;
+    company: string;
+    testimonial: string;
     id?: number | null | undefined;
     avatar?: string | null | undefined;
 }, {}, {}, {}, mongoose.Document<unknown, {}, {
@@ -21,12 +20,11 @@ declare const Testimonial: mongoose.Model<{
     sort_order: number;
     is_active: boolean;
     name: string;
-    country: string;
-    company: string;
     rating: number;
-    designation: string;
-    testimonial: string;
     category: string;
+    designation: string;
+    company: string;
+    testimonial: string;
     id?: number | null | undefined;
     avatar?: string | null | undefined;
 }, {}> & {
@@ -36,12 +34,11 @@ declare const Testimonial: mongoose.Model<{
     sort_order: number;
     is_active: boolean;
     name: string;
-    country: string;
-    company: string;
     rating: number;
-    designation: string;
-    testimonial: string;
     category: string;
+    designation: string;
+    company: string;
+    testimonial: string;
     id?: number | null | undefined;
     avatar?: string | null | undefined;
 } & {
@@ -58,12 +55,11 @@ declare const Testimonial: mongoose.Model<{
     sort_order: number;
     is_active: boolean;
     name: string;
-    country: string;
-    company: string;
     rating: number;
-    designation: string;
-    testimonial: string;
     category: string;
+    designation: string;
+    company: string;
+    testimonial: string;
     id?: number | null | undefined;
     avatar?: string | null | undefined;
 }, mongoose.Document<unknown, {}, mongoose.FlatRecord<{
@@ -73,12 +69,11 @@ declare const Testimonial: mongoose.Model<{
     sort_order: number;
     is_active: boolean;
     name: string;
-    country: string;
-    company: string;
     rating: number;
-    designation: string;
-    testimonial: string;
     category: string;
+    designation: string;
+    company: string;
+    testimonial: string;
     id?: number | null | undefined;
     avatar?: string | null | undefined;
 }>, {}> & mongoose.FlatRecord<{
@@ -88,12 +83,11 @@ declare const Testimonial: mongoose.Model<{
     sort_order: number;
     is_active: boolean;
     name: string;
-    country: string;
-    company: string;
     rating: number;
-    designation: string;
-    testimonial: string;
     category: string;
+    designation: string;
+    company: string;
+    testimonial: string;
     id?: number | null | undefined;
     avatar?: string | null | undefined;
 }> & {

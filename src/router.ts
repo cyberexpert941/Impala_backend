@@ -5,6 +5,7 @@ import propertyRouter from "./app/v1/property/route"
 import categoryRouter from "./app/v1/category/route" 
 import listedForRouter from "./app/v1/listed_for/route" 
 import reviewsRouter from "./app/v1/reviews/route" 
+import testimonialsRouter from "./app/v1/testimonials/route"    
 
 const router = express.Router();
 
@@ -14,5 +15,6 @@ router.use("/property", propertyRouter)
 router.use("/category", categoryRouter)  
 router.use("/listed_for", listedForRouter)  
 router.use("/reviews", reviewsRouter)  
+router.use("/testimonials", testimonialsRouter)  
 
 export default router;

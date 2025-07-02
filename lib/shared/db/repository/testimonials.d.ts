@@ -5,12 +5,11 @@ declare const create_testimonials: (data: any) => Promise<import("mongoose").Doc
     sort_order: number;
     is_active: boolean;
     name: string;
-    country: string;
-    company: string;
     rating: number;
-    designation: string;
-    testimonial: string;
     category: string;
+    designation: string;
+    company: string;
+    testimonial: string;
     id?: number | null | undefined;
     avatar?: string | null | undefined;
 }, {}> & {
@@ -20,12 +19,11 @@ declare const create_testimonials: (data: any) => Promise<import("mongoose").Doc
     sort_order: number;
     is_active: boolean;
     name: string;
-    country: string;
-    company: string;
     rating: number;
-    designation: string;
-    testimonial: string;
     category: string;
+    designation: string;
+    company: string;
+    testimonial: string;
     id?: number | null | undefined;
     avatar?: string | null | undefined;
 } & {
@@ -40,12 +38,11 @@ declare const update_testimonials: (query: any, data: any) => Promise<(import("m
     sort_order: number;
     is_active: boolean;
     name: string;
-    country: string;
-    company: string;
     rating: number;
-    designation: string;
-    testimonial: string;
     category: string;
+    designation: string;
+    company: string;
+    testimonial: string;
     id?: number | null | undefined;
     avatar?: string | null | undefined;
 }, {}> & {
@@ -55,12 +52,11 @@ declare const update_testimonials: (query: any, data: any) => Promise<(import("m
     sort_order: number;
     is_active: boolean;
     name: string;
-    country: string;
-    company: string;
     rating: number;
-    designation: string;
-    testimonial: string;
     category: string;
+    designation: string;
+    company: string;
+    testimonial: string;
     id?: number | null | undefined;
     avatar?: string | null | undefined;
 } & {
@@ -75,12 +71,11 @@ declare const get_testimonials: (query: any) => Promise<(import("mongoose").Flat
     sort_order: number;
     is_active: boolean;
     name: string;
-    country: string;
-    company: string;
     rating: number;
-    designation: string;
-    testimonial: string;
     category: string;
+    designation: string;
+    company: string;
+    testimonial: string;
     id?: number | null | undefined;
     avatar?: string | null | undefined;
 }> & {
@@ -94,12 +89,11 @@ declare const list_testimonials: (query: any, per_page: any, page_no: any, sort:
     sort_order: number;
     is_active: boolean;
     name: string;
-    country: string;
-    company: string;
     rating: number;
-    designation: string;
-    testimonial: string;
     category: string;
+    designation: string;
+    company: string;
+    testimonial: string;
     id?: number | null | undefined;
     avatar?: string | null | undefined;
 }> & {
@@ -121,12 +115,11 @@ declare const upsert_testimonials: (query: any, data: any) => Promise<(import("m
     sort_order: number;
     is_active: boolean;
     name: string;
-    country: string;
-    company: string;
     rating: number;
-    designation: string;
-    testimonial: string;
     category: string;
+    designation: string;
+    company: string;
+    testimonial: string;
     id?: number | null | undefined;
     avatar?: string | null | undefined;
 }, {}> & {
@@ -136,12 +129,11 @@ declare const upsert_testimonials: (query: any, data: any) => Promise<(import("m
     sort_order: number;
     is_active: boolean;
     name: string;
-    country: string;
-    company: string;
     rating: number;
-    designation: string;
-    testimonial: string;
     category: string;
+    designation: string;
+    company: string;
+    testimonial: string;
     id?: number | null | undefined;
     avatar?: string | null | undefined;
 } & {

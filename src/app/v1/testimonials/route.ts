@@ -12,8 +12,8 @@ router.post('/create', authentication, newController.create)
 router.post('/upsert', authentication, newController.upsert)
 router.post('/:id/update', authentication, newController.update)
 router.delete('/:id/delete', authentication, newController.delete)
-router.get('/get/:id', authentication, newController.get)
-router.get('', authentication, newController.list)
+router.get('/get/:id', newController.get)
+router.get('', newController.list)
 router.get('/web/list/', newController.list_frontend)
 
 export default router

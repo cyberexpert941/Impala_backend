@@ -99,9 +99,9 @@ class Controller {
             let decoded = await jsonWebToken.verify((headers.authorization).split(" ")[1])
             // console.log("decoded677",JSON.stringify(decoded))
             let user_type = decoded?.user_types?.[0]?.name;
-            if(user_type != "SUPER_ADMIN"){
-                filterQuery["country_name"] = decoded?.country;
-            }         
+            // if(user_type != "SUPER_ADMIN"){
+            //     filterQuery["country_name"] = decoded?.country;
+            // }         
 
             let sort = { "createdAt": -1 }
 
@@ -115,10 +115,13 @@ class Controller {
             let and_conditions = []
             //======================= search filter=======================================================================
             if (!(typeof query?.search === 'undefined')) {
-                search_or_conditions.push({ "country_name": new RegExp(`.*${query?.search}.*`, 'i') })
-                search_or_conditions.push({ "country_code": new RegExp(`.*${query?.search}.*`, 'i') })
-                search_or_conditions.push({ "country_currency": new RegExp(`.*${query?.search}.*`, 'i') })
-                search_or_conditions.push({ "country_timezone": new RegExp(`.*${query?.search}.*`, 'i') })
+                search_or_conditions.push({ "title": new RegExp(`.*${query?.search}.*`, 'i') })
+                search_or_conditions.push({ "description": new RegExp(`.*${query?.search}.*`, 'i') })
+                search_or_conditions.push({ "location.regions": new RegExp(`.*${query?.search}.*`, 'i') })
+                search_or_conditions.push({ "location.cities": new RegExp(`.*${query?.search}.*`, 'i') })
+                search_or_conditions.push({ "location.countries": new RegExp(`.*${query?.search}.*`, 'i') })
+                search_or_conditions.push({ "location.states": new RegExp(`.*${query?.search}.*`, 'i') })
+                search_or_conditions.push({ "location.countries": new RegExp(`.*${query?.search}.*`, 'i') })
             } 
 
             if (search_or_conditions.length > 0) {

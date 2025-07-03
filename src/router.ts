@@ -6,6 +6,7 @@ import categoryRouter from "./app/v1/category/route"
 import listedForRouter from "./app/v1/listed_for/route" 
 import reviewsRouter from "./app/v1/reviews/route" 
 import testimonialsRouter from "./app/v1/testimonials/route"    
+import projectsRouter from "./app/v1/projects/route"    
 
 const router = express.Router();
 
@@ -16,5 +17,6 @@ router.use("/category", categoryRouter)
 router.use("/listed_for", listedForRouter)  
 router.use("/reviews", reviewsRouter)  
 router.use("/testimonials", testimonialsRouter)  
+router.use("/projects", projectsRouter)  
 
 export default router;
